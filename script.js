@@ -1,10 +1,12 @@
 var currentDayEl = $('#currentDay')
-var hourEl = $(".hour")
-var textEl = $(".text")
+var hourEl = $(".hourPlace")
+var textEl = $(".textDiv")
 var saveBtnEl = $(".btn")
 var localPull = JSON.parse(localStorage.getItem("itinerary"))
 var saveArr = []
-var finish = localPull[""]
+var finish = localPull[0]
+var hourText = Number(hourEl.text())
+var timeText = Number(moment().format("HH"))
 
 //Moment.js global variables
 var time = moment()
@@ -25,7 +27,7 @@ $("#currentDay").text(time);
 function saveText() {
     var toDo = [{
         work: $(this).siblings("input").val(),
-        hour: $(this).siblings("h4").text(),
+        hour: $(this).siblings("div").text(),
     }]
 
     saveArr.push(toDo)
@@ -60,6 +62,20 @@ function renderMessage() {
 
 //save button is clicked in section
 
-// if (hour.val() === moment().format("hh a")) {
-//     moment().style.propery = "green";
-// } else if (hour.val() === moment().isBefore("hh a")) 
+if (hourText <  timeText) {
+    textEl.addClass("past");
+    textEl.removeClass("present");
+    textEl.removeClass("future");
+
+} else if (hourText === timeText) {
+    textEl.
+    textEl.addClass("present");
+    textEl.removeClass("past")
+    textEl.removeClass("future")
+
+} else {
+    textEl.addClass("future");
+    textEl.removeClass("past")
+    textEl.removeClass("present")
+}
+
