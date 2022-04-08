@@ -71,24 +71,23 @@ textarea {
   transition: all 0.3s ease-in-out;
 }
 
-.hour {
+.whole {
   display: flex;
   flex-direction: row;
 }
 
-.hour h4 {
+.hour {
   width: 10vw;
   text-align: right;
-  margin-top: 20px;
 }
 
-.hour input {
+.whole input {
   width: 75vw;
   background-color: rgb(188, 185, 185);
-  margin-left: 20px;
+
 }
 
-.hour button {
+.whole button {
   width: 10vw;
   background-color: teal;
   border-top-right-radius: 8px;
