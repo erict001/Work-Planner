@@ -32,7 +32,7 @@ textarea {
 
 .row {
   white-space: pre-wrap;
-  height: 80px;
+  height: 110px;
   border-top: 1px solid white;
 }
 
@@ -59,9 +59,11 @@ textarea {
 }
 
 .btn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border: 1px solid black;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   background-color: #06aed5;
   color: white;
 }
@@ -92,9 +94,16 @@ textarea {
   background-color: teal;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
-
 };
 
 .hour .bi {
   color: white;
+}
+
+.textDiv {
+  border: 1px solid black;
+}
+
+.btn {
+  border: 1px solid black;
 }
